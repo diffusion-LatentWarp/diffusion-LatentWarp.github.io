@@ -55,7 +55,7 @@
             <h1 class="title is-1 publication-title">LatentWarp: Consistent Diffusion Latents for Zero-Shot Video-to-Video</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
+              <!-- <span class="author-block">
                 <a href="https://openreview.net/profile?id=~Yuxiang_Bao1" target="_blank">Yuxiang Bao</a><sup>*</sup>,</span>
                 <span class="author-block">
                   <a href="https://openreview.net/profile?id=~Di_Qiu2" target="_blank">Di Qiu</a><sup>*</sup>,</span>
@@ -73,16 +73,19 @@
                   </span>
                   <span class="author-block">
                     <a href="https://openreview.net/profile?id=~Pengfei_Yan1" target="_blank">Pengfei Yan</a>
+                  </span> -->
+                  <span class="author-block">
+                    <a href="" target="_blank">Anonymous</a>
                   </span>
 
                   </div>
 
-                  <div class="is-size-6 publication-authors">
+                  <!-- <div class="is-size-6 publication-authors">
                     <span class="author-block">Beihang University</span>
                     <br><span class="author-block">Meituan</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                     <span class="eql-cntrb"><small><br><sup>†</sup>Indicates Corresponding Authors</small></span>
-                  </div>
+                  </div> -->
 
                   <!-- <div class="is-size-3 publication-authors">
                     <span class="author-block">ICLR 2024</span>
@@ -92,7 +95,7 @@
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href='https://arxiv.org/abs/2311.00353' target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -100,7 +103,7 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
@@ -120,7 +123,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code would be released</span>
                   </a>
                 </span>
               <!-- Hugging Face Demo link with an image icon -->
@@ -204,7 +207,7 @@
       <table width="800" border="0">
         <tbody>
           <tr>
-            <td colspan="4">
+            <td colspan="2">
               <p>
                 We observe that although the global appearance is improved with the help of cross-frame attention mechanism, there remains inconsistency in the details across frames, as illustrated in the video visualization below.
                 We investigate this phenomenon and would attribute this inconsistency to the variation in query tokens across different frames. 
@@ -217,51 +220,62 @@
           <tr>
             <td style="font-size: 16px; text-align: center;">Original</td>
             <td style="font-size: 16px; text-align: center;">Per Frame Editing</td>
-            <td style="font-size: 16px; text-align: center;">Cross Frame Attention</td>
-            <td style="font-size: 16px; text-align: center;">Ours</td>
+            <!-- <td style="font-size: 16px; text-align: center;">Cross Frame Attention</td>
+            <td style="font-size: 16px; text-align: center;">Ours</td> -->
           </tr>
           <tr class="video-row">
             <td style="text-align: center;">
               <a href="sm/assets/bear.mp4">
-                <video preload="auto"width="168" src="sm/assets/bear.mp4" autoplay loop controls muted/>
+                <video preload="auto"width="400" src="sm/assets/bear.mp4" autoplay loop controls muted/>
               </a>
             </td>
             <td style="text-align: center;">
               <a href="sm/assets/page/bear_controlnet_25fps.mp4">
-                <video preload="auto"width="168" src="sm/assets/page/bear_controlnet_25fps.mp4" autoplay loop controls muted/>
+                <video preload="auto"width="400" src="sm/assets/page/bear_controlnet_25fps.mp4" autoplay loop controls muted/>
               </a>
             </td>
-            <td style="text-align: center;">
+            <!-- <td style="text-align: center;">
               <a href="sm/assets/page/bear_cross_frame_attn_25fps.mp4">
-                <video preload="auto"width="168" src="sm/assets/page/bear_cross_frame_attn_25fps.mp4" autoplay loop controls muted/>
+                <video preload="auto"width="200" src="sm/assets/page/bear_cross_frame_attn_25fps.mp4" autoplay loop controls muted/>
               </a>
             </td>
             <td style="text-align: center;">
               <a href="sm/assets/page/bear_ours_25fps.mp4">
-                <video preload="auto"width="168" src="sm/assets/page/bear_ours_25fps.mp4" autoplay loop controls muted/>
+                <video preload="auto"width="200" src="sm/assets/page/bear_ours_25fps.mp4" autoplay loop controls muted/>
+              </a>
+            </td> -->
+          </tr>
+          <tr>
+            <!-- <td style="font-size: 16px; text-align: center;">Original</td>
+            <td style="font-size: 16px; text-align: center;">Per Frame Editing</td> -->
+            <td style="font-size: 16px; text-align: center;">Cross Frame Attention</td>
+            <td style="font-size: 16px; text-align: center;">Ours</td>
+          </tr>
+          <tr class="video-row">
+            <!-- <td style="text-align: center;">
+              <a href="sm/assets/bear.mp4">
+                <video preload="auto"width="200" src="sm/assets/bear.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <td style="text-align: center;">
+              <a href="sm/assets/page/bear_controlnet_25fps.mp4">
+                <video preload="auto"width="200" src="sm/assets/page/bear_controlnet_25fps.mp4" autoplay loop controls muted/>
+              </a>
+            </td> -->
+            <td style="text-align: center;">
+              <a href="sm/assets/page/bear_cross_frame_attn_25fps.mp4">
+                <video preload="auto"width="400" src="sm/assets/page/bear_cross_frame_attn_25fps.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <td style="text-align: center;">
+              <a href="sm/assets/page/bear_ours_25fps.mp4">
+                <video preload="auto"width="400" src="sm/assets/page/bear_ours_25fps.mp4" autoplay loop controls muted/>
               </a>
             </td>
           </tr>
-          <!-- <tr class="video-row">
-            <td style="text-align: center;">
-              <a href="videos/pca/tokens_origvideo_30.mp4">
-                <video preload="auto"width="224" src="videos/pca/tokens_origvideo_30.mp4" autoplay loop controls muted/>
-              </a>
-            </td>
-            <td style="text-align: center;">
-              <a href="videos/pca/tokens_pnpvideo_30.mp4">
-                <video preload="auto"width="224" src="videos/pca/tokens_pnpvideo_30.mp4" autoplay loop controls muted/>
-              </a>
-            </td>
-            <td style="text-align: center;">
-              <a href="videos/pca/tokens_flowvideo_30.mp4">
-                <video preload="auto"width="224" src="videos/pca/tokens_flowvideo_30.mp4" autoplay loop controls muted/>
-              </a>
-            </td>
-          </tr> -->
+
           <tr>
-            
-            <td colspan="4">
+            <td colspan="2">
               <p style="margin-top: 20px; margin-bottom: -12px;">
                 Our key motivation is that a temporally-consistent edit can be achieved by additionally imposing constraints on the query tokens.
                 We achieve this by applying the warping operation and obtaining query tokens from the latent features, we ensure that the corresponding regions between adjacent frames have closely
@@ -280,7 +294,7 @@
       </table>
 
         <div>
-          <td colspan="4"><img src="pics/figure_method_v8.png" alt="" width="1000" /></td>
+          <td colspan="2"><img src="pics/figure_method_v8.png" alt="" width="1000" /></td>
         </div>
       
       </div>
@@ -324,9 +338,11 @@
         <video preload="auto"class="default-video" src="sm/assets/wolf_pig(Ours).mp4" preload="metadata" autoplay controls loop muted></video>
         <div class="overlay-text">a pig</div>
       </div>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="video-wrapper" style="width: 32%">
+        <video preload="auto"class="hover-video" src="sm/assets/puff.mp4" preload="metadata" autoplay loop muted> </video>
+        <video preload="auto"class="default-video" src="sm/assets/puff_pixar-style_16fps.mp4" preload="metadata" autoplay controls loop muted></video>
+        <div class="overlay-text">Pixar style, a cat</div>
+      </div>
     <div class="video-wrapper" style="width: 32%">
       <video preload="auto"class="default-video" src="sm/assets/comparison/woman-running_marble.mp4" preload="metadata" autoplay loop muted> </video>
       <video preload="auto"class="hover-video" src="sm/assets/woman-running.mp4" preload="metadata" autoplay controls loop muted></video>
