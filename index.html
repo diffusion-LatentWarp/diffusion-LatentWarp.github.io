@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>LatentWarp: Consistent Diffusion Latents for Zero-Shot Video-to-Video Translation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/flame.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">LatentWarp: Consistent Diffusion Latents for Zero-Shot Video-to-Video Translation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://openreview.net/profile?id=~Yuxiang_Bao1" target="_blank">Yuxiang Bao</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://openreview.net/profile?id=~Di_Qiu2" target="_blank">Di Qiu</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://openreview.net/profile?id=~Guoliang_Kang1" target="_blank">Guoliang Kang</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://openreview.net/profile?id=~Baochang_Zhang1" target="_blank">Baochang Zhang</a><sup>†</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://openreview.net/profile?id=~Bo_Jin3" target="_blank">Bo Jin</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://openreview.net/profile?id=~Kaiye_Wang2" target="_blank">Kaiye Wang</a><sup>†</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://openreview.net/profile?id=~Pengfei_Yan1" target="_blank">Pengfei Yan</a>
+                  </span>    
+              <!-- <span class="author-block">
+                    <a href="" target="_blank">Anonymous</a>
+                  </span> -->
+
+                  </div>
+
+                  <!-- <div class="is-size-6 publication-authors">
+                    <span class="author-block">Beihang University</span>
+                    <br><span class="author-block">Meituan</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="eql-cntrb"><small><br><sup>†</sup>Indicates Corresponding Authors</small></span>
+                  </div> -->
+
+                  <!-- <div class="is-size-3 publication-authors">
+                    <span class="author-block">ICLR 2024</span>
+
+                  </div> -->
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href='https://arxiv.org/abs/2311.00353' target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="sm/supp.html" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://diffusion-latentwarp.github.io/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code would be released</span>
+                  </a>
+                </span>
+              <!-- Hugging Face Demo link with an image icon -->
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/spaces/weizmannscience/tokenflow" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="static/images/hf.png" alt="Hugging Face Demo">
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span> -->
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2307.10373" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span> -->
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Leveraging the generative ability of image diffusion models 
+            offers great potential for zero-shot video-to-video translation.
+            The key lies in how to maintain temporal consistency across generated 
+            video frames by image diffusion models. 
+            Previous methods typically adopt cross-frame attention, i.e., 
+            sharing the key and value tokens across attentions of 
+            different frames, to encourage the temporal consistency. 
+            However, in those works, temporal inconsistency issue may not be 
+            thoroughly solved, rendering the fidelity of generated videos limited.
+            In this paper, we find the bottleneck lies in the unconstrained query 
+            tokens and propose a new zero-shot video-to-video translation framework, 
+            named LatentWarp. 
+            Our approach is simple: to constrain the query tokens to be 
+            temporally consistent, we further incorporate a warping operation in the latent 
+            space to constrain the query tokens. 
+            Specifically, based on the optical flow obtained from the original video, 
+            we warp the generated latent features of last frame to align with 
+            the current frame during the denoising process. 
+            As a result, the corresponding regions across the adjacent frames can 
+            share closely-related query tokens and attention outputs, 
+            which can further improve latent-level consistency to enhance visual 
+            temporal coherence of generated videos. Extensive experiment results 
+            demonstrate the superiority of LatentWarp in achieving 
+            video-to-video translation with temporal coherence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper poster -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+        
+      <table width="800" border="0">
+        <tbody>
+          <tr>
+            <td colspan="2">
+              <p>
+                We observe that although the global appearance is improved with the help of cross-frame attention mechanism, there remains inconsistency in the details across frames, as illustrated in the video visualization below.
+                We investigate this phenomenon and would attribute this inconsistency to the variation in query tokens across different frames. 
+                The reason is the key and value tokens are shared and fixed in cross-frame attention, but the query tokens are adopted from the current frame during the attention operation. 
+                Unconstrained query tokens would result in inconsistent attention outputs, further leading to variation in latent feature and pixel values.
+    
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 16px; text-align: center;">Original</td>
+            <td style="font-size: 16px; text-align: center;">Per Frame Translation</td>
+            <!-- <td style="font-size: 16px; text-align: center;">Cross Frame Attention</td>
+            <td style="font-size: 16px; text-align: center;">Ours</td> -->
+          </tr>
+          <tr class="video-row">
+            <td style="text-align: center;">
+              <a href="sm/assets/bear.mp4">
+                <video preload="auto"width="400" src="sm/assets/bear.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <td style="text-align: center;">
+              <a href="sm/assets/page/bear_controlnet_25fps.mp4">
+                <video preload="auto"width="400" src="sm/assets/page/bear_controlnet_25fps.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <!-- <td style="text-align: center;">
+              <a href="sm/assets/page/bear_cross_frame_attn_25fps.mp4">
+                <video preload="auto"width="200" src="sm/assets/page/bear_cross_frame_attn_25fps.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <td style="text-align: center;">
+              <a href="sm/assets/page/bear_ours_25fps.mp4">
+                <video preload="auto"width="200" src="sm/assets/page/bear_ours_25fps.mp4" autoplay loop controls muted/>
+              </a>
+            </td> -->
+          </tr>
+          <tr>
+            <!-- <td style="font-size: 16px; text-align: center;">Original</td>
+            <td style="font-size: 16px; text-align: center;">Per Frame Editing</td> -->
+            <td style="font-size: 16px; text-align: center;">Cross Frame Attention</td>
+            <td style="font-size: 16px; text-align: center;">Ours</td>
+          </tr>
+          <tr class="video-row">
+            <!-- <td style="text-align: center;">
+              <a href="sm/assets/bear.mp4">
+                <video preload="auto"width="200" src="sm/assets/bear.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <td style="text-align: center;">
+              <a href="sm/assets/page/bear_controlnet_25fps.mp4">
+                <video preload="auto"width="200" src="sm/assets/page/bear_controlnet_25fps.mp4" autoplay loop controls muted/>
+              </a>
+            </td> -->
+            <td style="text-align: center;">
+              <a href="sm/assets/page/bear_cross_frame_attn_25fps.mp4">
+                <video preload="auto"width="400" src="sm/assets/page/bear_cross_frame_attn_25fps.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <td style="text-align: center;">
+              <a href="sm/assets/page/bear_ours_25fps.mp4">
+                <video preload="auto"width="400" src="sm/assets/page/bear_ours_25fps.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <p style="margin-top: 20px; margin-bottom: -12px;">
+                Our key motivation is that a temporally-consistent edit can be achieved by additionally imposing constraints on the query tokens.
+                We achieve this by applying the warping operation and obtaining query tokens from the latent features, we ensure that the corresponding regions between adjacent frames have closely
+                related query tokens, in addition to the shared key and value
+                tokens provided by cross-frame attention. 
+              </p>
+              <p style="margin-top: 20px; margin-bottom: -12px;">
+              As a result, it could
+                be guaranteed that the latent representations of corresponding
+                areas between adjacent frames are generated closely, thus
+                enhancing the temporal coherence of the generated videos.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+        <div>
+          <td colspan="2"><img src="pics/figure_method_v8.png" alt="" width="1000" /></td>
+        </div>
+      
+      </div>
+      </div>
+  </section>
+<!--End paper poster -->
+
+<!-- Video grid -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">LatentWarp Editing results</h2>
+          <div class="content has-text-justified">
+            <td colspan="3">
+              <p style="margin-top: -12px;">
+                Hover over the videos to see the original video and text prompts.
+              </p>
+            </td>
+  <!-- </td> -->
+    <!-- <div class="video-wrapper" style="width: 32%">
+      <video preload="auto"class="hover-video" src="videos/results/bread/input_fps20.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="videos/results/bread/result_fps_20.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">an ice sculpture</div>
+    </div>
+    <div class="video-wrapper" style="width: 32%">
+      <video preload="auto"class="hover-video" src="videos/results/wolf-part/input_fps20.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="videos/results/wolf-part/result_fps_20.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">a robotic wolf</div>
+    </div>
+    <div class="video-wrapper" style="width: 32%">
+      <video preload="auto"class="hover-video" src="videos/results/woman-running/input_fps30.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="videos/results/woman-running/marble.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">a marble sculpture</div>
+    </div>
+    <br /> -->
+    <div class="video-grid">
+      <div class="video-wrapper" style="width: 32%">
+        <video preload="auto"class="hover-video" src="sm/assets/wolf.mp4" preload="metadata" autoplay loop muted> </video>
+        <video preload="auto"class="default-video" src="sm/assets/wolf_pig(Ours).mp4" preload="metadata" autoplay controls loop muted></video>
+        <div class="overlay-text">a pig</div>
+      </div>
+      <div class="video-wrapper" style="width: 32%">
+        <video preload="auto"class="hover-video" src="sm/assets/puff.mp4" preload="metadata" autoplay loop muted> </video>
+        <video preload="auto"class="default-video" src="sm/assets/puff_pixar-style_16fps.mp4" preload="metadata" autoplay controls loop muted></video>
+        <div class="overlay-text">Pixar style, a cat</div>
+      </div>
+    <div class="video-wrapper" style="width: 32%">
+      <video preload="auto"class="default-video" src="sm/assets/comparison/woman-running_marble.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="hover-video" src="sm/assets/woman-running.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">an origami of a stork</div>
+    </div>
+    <br />
+    <div class="video-wrapper">
+      <video preload="auto"class="default-video" src="sm/assets/tesla_pink-car.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="hover-video" src="sm/assets/tesla.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">a pink car</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="sm/assets/bear.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="sm/assets/bear_softpainting_60.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">soft painting, a bear</div>
+    </div>
+    <br/>
+    <div class="video-wrapper">
+      <video preload="auto"class="default-video" src="sm/assets/blackswan_vangoh(Ours).mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="hover-video" src="sm/assets/blackswan.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">Van Gogh Starry Night style, a swan</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="sm/assets/dog-agility.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="sm/assets/comparison/dog-agility_vangoh.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">oil painting style, a dog</div>
+    </div>
+    <br/>
+    <div class="video-wrapper">
+        <video preload="auto"class="default-video" src="sm/assets/gold-fish_vangoh(Ours).mp4" preload="metadata" autoplay loop muted> </video>
+        <video preload="auto"class="hover-video" src="sm/assets/gold-fish.mp4" preload="metadata" autoplay controls loop muted></video>
+        <div class="overlay-text">Van Gogh Starry Night style, fishes</div>
+      </div>
+      <div class="video-wrapper">
+        <video preload="auto"class="hover-video" src="sm/assets/flamingo.mp4" preload="metadata" autoplay loop muted> </video>
+        <video preload="auto"class="default-video" src="sm/assets/flamingo_space.mp4" preload="metadata" autoplay controls loop muted></video>
+        <div class="overlay-text">flamingo in the space</div>
+      </div>
+      <br/>
+  </div>
+  
+</section>
+<!-- End video preload="auto"grid -->
+
+<!-- video preload="auto"carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <h2 class="title is-3">Comparisons</h2>
+          <div class="content has-text-justified">
+            <div class="caption-container" style="width: 1200px; padding-left: 70px; padding-right: 70px">
+              <div class="caption">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input video</p>
+              </div>
+              <div class="caption">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ours</p>
+              </div>
+              <div class="caption">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text-to-video <a href="#ref-txt2vid">[1]</a></p>
+              </div>
+              <div class="caption">
+                <p>Tune-a-video <a href="#ref-TAV">[2]</a></p>
+              </div>
+              <div class="caption">
+                <p>Gen-1 <a href="#ref-gen1">[3]</a></p>
+              </div>
+              <div class="caption">
+                <p>TokenFlow<a href="#ref-pnp">[4]</a></p>
+              </div>
+              <div class="caption">
+                <p>Rerender-a-video<a href="#ref-rerender">[5]</a></p>
+              </div>
+              
+              <!-- Add remaining captions here  -->
+            </div>
+      <div id="results-carousel" class="carousel results-carousel" align="center">
+        <div class="item item-video1">
+           <!-- Add caption element for each video preload="auto"-->
+          <video preload="auto"poster="" id="video11" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/bear.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="video12" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/bear_vangoh_60.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video13" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/bear-t2v.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video14" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/bear-TAV.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video15" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/bear-Gen-1,text_prompt Van Gogh Starry Nigh,style_consistency 2,style_weight 85,seed 36931641,frame_consistency 1,upscale false,foreground_only false,background_only false.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video16" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/bear-tokenflow.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/bear-rerender.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        
+        <div class="item item-video2">
+          
+          <video preload="auto"poster="" id="video1" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/dog-agility.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video21" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/dog-agility_vangoh.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video22" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/dog-agility-text2video-zero.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video23" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/dog-agility-TAV.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video24" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/dog-agility-Gen-1 dog-agility,text_prompt Van Gogh oil paintin,style_consistency 2,style_weight 85,seed 761354211,frame_consistency 1,upscale false,foreground_only false,background_only false.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/dog-agility-tokenflow.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="sm/assets/comparison/dog-agility-rerender.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video preload="auto"carousel -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <!-- <h2 class="title is-3"></h2> -->
+          <div class="content has-text-justified">
+  <p>
+    <a name="ref-txt2vid" id="ref-txt2vid"></a>
+    [1] Levon Khachatryan, Andranik Movsisyan, Vahram Tadevosyan, Roberto Henschel, Zhangyang Wang, Shant Navasardyan, and Humphrey Shi. Text2video-zero: Text-to-image diffusion models are zero-shot video generators. arXiv preprint arXiv:2303.13439, 2023.
+  </p>
+  <p>
+    <a name="ref-TAV" id="ref-TAV"></a>
+    [2] Jay Zhangjie Wu, Yixiao Ge, Xintao Wang, Stan Weixian
+    Lei, Yuchao Gu, Wynne Hsu, Ying Shan, Xiaohu Qie, and
+    Mike Zheng Shou. Tune-a-video: One-shot tuning of image
+    diffusion models for text-to-video generation. arXiv preprint
+    arXiv:2212.11565, 2022
+  </p>
+  <p>
+    <a name="ref-gen1" id="ref-gen1"></a>
+    [3] Patrick Esser, Johnathan Chiu, Parmida Atighehchian,
+    Jonathan Granskog, and Anastasis Germanidis. Structure
+    and content-guided video synthesis with diffusion models.
+    arXiv preprint arXiv:2302.03011, 2023
+  </p>
+  <p>
+    <a name="ref-pnp" id="ref-pnp"></a>
+    [4] Michal Geyer, Omer Bar-Tal, Shai Bagon, Tali Dekel. Tokenflow: Consistent diffusion features for consistent video editing. arXiv preprint arXiv:2307.10373, 2023
+  </p>
+  
+  <p>
+    <a name="ref-rerender" id="ref-rerender"></a>
+    [5] Yang, Shuai and Zhou, Yifan and Liu, Ziwei and Loy, Chen Change. Rerender a video: Zero-shot text-guided video-to-video translation. SIGGRAPH Asia 2023 Conference Papers, 2023
+  </p>
+  </div>
+        </div>
+      </div>
+    </div>  
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const videoWrappers = document.querySelectorAll('.video-wrapper');
+      
+        videoWrappers.forEach(wrapper => {
+          const defaultVideo = wrapper.querySelector('.default-video');
+          const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+          const height = wrapper.offsetWidth / aspectRatio;
+      
+          wrapper.style.height = `${height}px`;
+      
+          wrapper.addEventListener('mouseenter', () => {
+            defaultVideo.pause();
+            hoverVideo.play();
+          });
+      
+          wrapper.addEventListener('mouseleave', () => {
+            defaultVideo.play();
+            hoverVideo.pause();
+          });
+        });
+      }); 
+      $(document).ready(function() {
+        var carouselItems = $('.carousel .item');
+        var numItems = carouselItems.length;
+        var numVideos = 5;
+        var currentIndex = 0;
+    
+        $('.carousel').on('click', function() {
+          currentIndex++;
+          if (currentIndex + numVideos <= numItems) {
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          } else {
+            currentIndex = 0;
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          }
+        });
+    
+        carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+      });
+    </script>
+  </body>
+  </html>
